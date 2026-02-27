@@ -4,7 +4,7 @@
 Determine the number of flights per route, planning period, and aircraft type to maximize expected profit,
 subject to fleet-hour capacity and minimum service constraints.
 
-## Dataset (Source)
+## Dataset
 Airline Route Profitability and Cost Analysis (Kaggle):
 https://www.kaggle.com/datasets/waleedfaheem/airline-route-profitability-and-cost-analysis/data
 
@@ -17,7 +17,7 @@ Mixed-Integer Linear Programming (MILP) solved with Gurobi.
 - src: python scripts (cleaning, model, experiments)
 - outputs: solutions and experiment results
 
-## DS502 Deliverables Roadmap 
+## DS502 Roadmap 
 
 ### D1 — Topic & Repo Setup (Week 3)
 - Repo structure: `data/raw`, `data/processed`, `src`, `outputs`
@@ -49,10 +49,10 @@ Mixed-Integer Linear Programming (MILP) solved with Gurobi.
 - Add 1–2 realism constraints (budget and/or route-category service and/or loss-risk limit)
 - Run full experiment set and export `outputs/experiments_summary.csv`
 
-### D7 — ML/Advanced (Optional, Weeks 10–11)
-- Optional: predict profit-per-flight (π_rta) using route/season/aircraft features and re-optimize
+### D7 — ML/Advanced (Weeks 10–11)
+- predict profit-per-flight using route/season/aircraft features and re-optimize
 
-### D8 — Final Report + Slides (Week 12)
+### D8 — Final Report (Week 12)
 - Final report: data prep, MILP, flow baseline, experiments, results, limitations
 - Slides: model summary + key scenario insights
 
