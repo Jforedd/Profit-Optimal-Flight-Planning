@@ -22,7 +22,6 @@ Mixed-Integer Linear Programming (MILP) solved with Gurobi.
 ### D1 — Topic & Repo Setup (Week 3)
 - Repo structure: `data/raw`, `data/processed`, `src`, `outputs`
 - README: problem + dataset link + plan + roles
-- LMS: one-page PDF (title, motivation, data source, problem, variables, MILP method, references)
 
 ### D2 — Proposal (Week 4)
 - Finalize scope: monthly flight frequency planning for DXB routes
