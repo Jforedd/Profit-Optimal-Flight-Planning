@@ -1,4 +1,4 @@
-"""02_build_model_gurobi.py
+"""02_build_model.py
 
 TODO:
 - Read data/processed/params_rta.csv
