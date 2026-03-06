@@ -20,6 +20,8 @@ https://www.kaggle.com/datasets/waleedfaheem/airline-route-profitability-and-cos
 I downloaded the dataset, and using it through the file path.
 
 ## Modeling Plan (MILP)
+This project is naturally formulated as a Mixed-Integer Linear Program (MILP) because the key decisions include both discrete and logical choices. The number of flights assigned to each route–period–aircraft combination must be an integer because operating 3.7 flights is not meaningful, and minimum-service/coverage requirements introduce binary “served/not served” decisions for routes. These logical constraints are expressed through standard linking formulations and, while fleet-hour capacity constraints remain linear. Therefore, MILP provides the correct modeling class-capturing integrality and service logic-while allowing efficient solution with solvers such as Gurobi under the project’s scope and timeline.
+
 ### Sets / indices
 - r ∈ R: routes (origin–destination)
 - t ∈ T: planning periods (Month)
