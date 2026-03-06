@@ -58,6 +58,7 @@ Mixed-Integer Linear Programming (MILP) solved with Gurobi/OR-Tools.
 - README: problem + dataset link + plan + roles
 
 ### D2 — Proposal (Week 4)
+- Analyze the data
 - Finalize scope: monthly flight frequency planning for DXB routes
 - Assumptions + data plan: parameter estimation for (route, month, aircraft)
 - Baseline MILP: objective + core constraints + scenario list (10+)
@@ -80,7 +81,7 @@ Mixed-Integer Linear Programming (MILP) solved with Gurobi/OR-Tools.
 
 ### D6 — Implementation v2 + Extended Results (Week 9)
 - Add 1–2 realism constraints (budget and/or route-category service and/or loss-risk limit)
-- Run full experiment set and export `outputs/experiments_summary.csv`
+- Run full experiment set and export the results
 
 ### D7 — ML/Advanced (Weeks 10–11)
 - predict profit-per-flight using route/season/aircraft features and re-optimize
