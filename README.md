@@ -50,8 +50,8 @@ Mixed-Integer Linear Programming (MILP) solved with Gurobi/OR-Tools.
 
 ## Repo Structure
 - data/raw: raw dataset 
-- data/processed: cleaned/aggregated parameters for optimization
-- src: python scripts (cleaning, model, experiments)
+- data/processed: cleaned/aggregated sets/parameters for optimization
+- src: python scripts (read/analyze, clean/aggregate, model, experiments)
 - outputs: solutions and experiment results
 
 ## DS502 Roadmap 
