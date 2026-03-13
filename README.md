@@ -19,7 +19,7 @@ Airline Route Profitability and Cost Analysis (Kaggle):
 https://www.kaggle.com/datasets/waleedfaheem/airline-route-profitability-and-cost-analysis/data
 I downloaded the dataset, and using it through the file path.
 
-## Modeling Plan
+## Model description (MILP)
 
 ### Sets / indices
 - r ∈ R: routes (origin–destination)
@@ -31,8 +31,8 @@ I downloaded the dataset, and using it through the file path.
 - h[r,t,a]: expected aircraft-hours per flight
 
 ### Decision variables
-- x[r,t,a] ∈ Z₊ : number of flights
-- y[r,t] ∈ {0,1} : served/not served 
+- \(x_{rta} \in \mathbb{Z}_{\ge 0}\): number of flights operated on route \(r\) in period \(t\) with aircraft type \(a\)
+- \(y_{rt} \in \{0,1\}\): 1 if route \(r\) is served in period \(t\), else 0
 
 ### Objective
 Maximize total expected profit:
