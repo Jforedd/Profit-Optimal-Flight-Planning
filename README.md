@@ -75,8 +75,8 @@ max  Σ_{r,t,a}  π_rta^(δ) · x_rta
 | (4) | Σ_a x_rta ≥ L_rt · y_rt | ∀r, t | Minimum flights when a route is served |
 | (5) | 0 ≤ x_rta ≤ M_rta | ∀r, t, a | Non-negativity and data-driven upper bounds |
 | (6) | Σ_{r∈R_c} y_rt ≥ K_ct | ∀c, t | Category coverage: at least K_ct routes served per category |
-| (7) | x_rta ∈ ℤ₊ | — | Integer flight counts |
-| (8) | y_rt ∈ {0, 1} | — | Binary service indicators |
+| (7) | x_rta ∈ ℤ₊ |  | Integer flight counts |
+| (8) | y_rt ∈ {0, 1} |  | Binary service indicators |
 
 ---
 
