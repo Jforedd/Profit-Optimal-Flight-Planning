@@ -1,48 +1,20 @@
 # Profit-Optimal Flight Planning (DS502 - Path B - Ezgi D. S024981)
 
+A Mixed-Integer Linear Programming (MILP) model that determines optimal flight frequencies across routes, planning periods, and aircraft types to maximize expected profit, subject to fleet-hour capacity and minimum service requirements.
+
+**Dataset:** [Airline Route Profitability and Cost Analysis – Kaggle](https://www.kaggle.com/datasets/waleedfaheem/airline-route-profitability-and-cost-analysis/data)  
+**GitHub:** https://github.com/Jforedd/Profit-Optimal-Flight-Planning.git
+
 ## Problem Description
-We aim to determine the number of flights to operate for each **route (r)**, **planning period (t)**, and **aircraft type (a)** to **maximize expected profit**, subject to:
-- limited fleet operating capacity (modeled via aircraft-hours),
-- minimum service / coverage requirements (to avoid dropping important routes).
 
-**Decision outputs**
-- flight plan: `x[r,t,a]` = number of flights scheduled
-- served indicator: `y[r,t]` = whether route r is served in period t (optional)
+An airline operating out of a single hub (DXB) must allocate limited fleet capacity across a set of routes and monthly planning periods. Using historical profitability and cost records, the model selects flight frequencies per route–period–aircraft combination to maximize total expected profit while respecting aircraft-hour limits and optional minimum service levels across route categories (short-, medium-, and long-haul).
 
-## Scope 
-- Network: single origin hub (DXB) to multiple destinations
-- Planning period: **monthly** (can be changed to Season if needed for faster experiments)
-- Level of detail: route frequency planning 
 
-## Dataset
-Airline Route Profitability and Cost Analysis (Kaggle):
-https://www.kaggle.com/datasets/waleedfaheem/airline-route-profitability-and-cost-analysis/data
-I downloaded the dataset, and using it through the file path.
 
-## Model description (MILP)
 
-### Sets / indices
-- r ∈ R: routes (origin–destination)
-- t ∈ T: planning periods (Month)
-- a ∈ A: aircraft types
 
-### Parameters 
-- π[r,t,a]: expected profit per flight
-- h[r,t,a]: expected aircraft-hours per flight
 
-### Decision variables
-- \(x_{rta} \in \mathbb{Z}_{\ge 0}\): number of flights operated on route \(r\) in period \(t\) with aircraft type \(a\)
-- \(y_{rt} \in \{0,1\}\): 1 if route \(r\) is served in period \(t\), else 0
 
-### Objective
-Maximize total expected profit:
-- max  Σ_{r,t,a}  π[r,t,a] · x[r,t,a]
-
-### Core constraints
-- Fleet-hour capacity
-- Service/coverage linking
-- Minimum service (if enabled)
-- Bounds
 
 ## Method
 Mixed-Integer Linear Programming (MILP) solved with Gurobi/OR-Tools. 
