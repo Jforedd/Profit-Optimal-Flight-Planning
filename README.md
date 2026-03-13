@@ -1,14 +1,9 @@
 # Profit-Optimal Flight Planning 
 ### (DS502 - Path B - Ezgi D. S024981)
 
-A Mixed-Integer Linear Programming (MILP) model that determines optimal flight frequencies across routes, planning periods, and aircraft types to maximize expected profit, subject to fleet-hour capacity and minimum service requirements.
-
-**Dataset:** [Airline Route Profitability and Cost Analysis – Kaggle](https://www.kaggle.com/datasets/waleedfaheem/airline-route-profitability-and-cost-analysis/data)  
-**GitHub:** https://github.com/Jforedd/Profit-Optimal-Flight-Planning.git
-
 ## Problem Description
+A Mixed-Integer Linear Programming (MILP) model that determines optimal flight frequencies across routes, planning periods, and aircraft types to maximize expected profit, subject to fleet-hour capacity and minimum service requirements. An airline operating out of a single hub (DXB) must allocate limited fleet capacity across a set of routes and monthly planning periods. Using historical profitability and cost records, the model selects flight frequencies per route–period–aircraft combination to maximize total expected profit while respecting aircraft-hour limits and optional minimum service levels across route categories (short-, medium-, and long-haul).
 
-An airline operating out of a single hub (DXB) must allocate limited fleet capacity across a set of routes and monthly planning periods. Using historical profitability and cost records, the model selects flight frequencies per route–period–aircraft combination to maximize total expected profit while respecting aircraft-hour limits and optional minimum service levels across route categories (short-, medium-, and long-haul).
 
 ## Repository Structure
 
