@@ -32,6 +32,25 @@ def load_data(
     K_ct_value=1,
     alpha=1.0,
 ):
+
+    """
+    Load MILP parameters from processed CSV files.
+
+    Parameters
+    n_routes   : int,keep top-N routes by total historical flights
+    n_months   : int,keep first N months (1-based)
+    n_aircraft : int,keep first N aircraft types
+    route_subset   : list or None  explicit route names to include
+    month_subset   : list or None  explicit month numbers to include
+    aircraft_subset: list or None  explicit aircraft types to include
+    K_ct_value : int, minimum routes per category per period (default 1)
+    alpha      : float, fleet-hour capacity multiplier (default 1.0)
+
+    Returns
+    data : dict with keys:
+        routes, periods, aircraft, categories, route_category, R_c,
+        pi, h, f, M, H_bar, H, L, K, combos
+    """
     
     # Load raw files
     params   = pd.read_csv(os.path.join(DATA_DIR, 'params_rta.csv'))
