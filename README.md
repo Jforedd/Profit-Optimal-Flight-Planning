@@ -4,13 +4,16 @@
 ## Problem Description
 A Mixed-Integer Linear Programming (MILP) model that determines optimal flight frequencies across routes, planning periods, and aircraft types to maximize expected profit, subject to fleet-hour capacity and minimum service requirements. An airline operating out of a single hub (DXB) must allocate limited fleet capacity across a set of routes and monthly planning periods. Using historical profitability and cost records, the model selects flight frequencies per route–period–aircraft combination to maximize total expected profit while respecting aircraft-hour limits and optional minimum service levels across route categories (short-, medium-, and long-haul).
 
-
 ## Repository Structure
 
 ```
 ├── data/
 │   ├── raw/              # Original Kaggle dataset
-│   └── processed/        # Cleaned & aggregated parameters 
+│   └── processed/
+│       ├── params_rta.csv
+│       ├── H_bar_at.csv
+│       ├── L_rt.csv
+│       └── route_category.csv
 ├── src/
 │   ├── 00_read_analyze.py 
 │   ├── 01_clean_aggregate.py   # Data prep → data/processed/
@@ -83,6 +86,18 @@ max  Σ_{r,t,a}  π_rta^(δ) · x_rta
 Gurobi is preferred for speed on larger instances.
 
 ---
+## How to run the code
+1. Place the processed input files inside `data/processed/`:
+   - `params_rta.csv`
+   - `H_bar_at.csv`
+   - `L_rt.csv`
+   - `route_category.csv`
+
+2. Install the required libraries:
+pandas gurobipy
+
+3. Run the main script from the project root directory:
+src/main.py
 
 ## Planned Experiments (≥ 10 scenarios)
 
