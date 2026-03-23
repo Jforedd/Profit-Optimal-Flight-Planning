@@ -86,6 +86,18 @@ max  Σ_{r,t,a}  π_rta^(δ) · x_rta
 Gurobi is preferred for speed on larger instances.
 
 ---
+
+## Solver / Library Requirements
+
+This project requires the following environment and libraries:
+
+- **Python 3.10+**
+- **pandas**
+- **gurobipy**
+- an active **Gurobi license** (academic)
+
+The optimization model is solved using **Gurobi Optimizer**. In the current small-instance run, the solver was executed with a **120-second time limit** and a **1% MIP gap tolerance**.
+
 ## How to run the code
 1. Place the processed input files inside `data/processed/`:
    - `params_rta.csv`
