@@ -38,6 +38,14 @@ print(f"Rows dropped (key duplicates): {n_before - len(df)}")
 
 print(f"\nClean dataset: {df.shape[0]} rows, {df.shape[1]} cols")
 
+# Fill missing numeric columns with group median
+num_cols = ["Ancillary_Revenue", "Fuel_Cost", "Flight_Hours"]
+for col in num_cols:
+    df[col] = df.groupby(["Route", "Aircraft_Type"])[col].transform(
+        lambda x: x.fillna(x.median())
+    )
+print(f"Missing values filled using group median by (Route, Aircraft_Type)")
+
 # ROUTE–CATEGORY LOOKUP 
 # Used for K_ct constraint in the MILP
 route_category = (
